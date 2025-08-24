@@ -1,0 +1,549 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9f6f2;
+    color: #000000;
+    line-height: 1.6;
+  }
+  
+  section {
+    padding: 60px 20px;
+    text-align: center;
+    min-height: 100vh;  /* setiap section minimal setinggi layar */
+    width: 100%;
+    display: block;
+  }
+
+  .judul-tanggal {
+    font-weight: 950; /* Lebih bold dari 'bold' biasa */
+    font-size: 1.2rem; /* Bisa sesuaikan ukurannya */
+    color: white; /* Bisa ganti sesuai background */
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Shadow lebih besar dan gelap */
+    letter-spacing: 1px;
+  }
+
+  .cover {
+    position: relative;
+    background: url('../img/hd-1.avif') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 10px 10px 16px #000;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+  }
+
+  .cover-logo {
+    position: absolute;
+    top: 40px; /* atur jarak dari atas sesuai keinginan */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    animation: fadeDown 1s ease-in-out;
+  }
+
+  .cover h1 {
+    font-size: 3em;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .cover h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .cover p {
+    font-size: 0.7em;
+  }
+  
+  .ayat {
+    background-color: #fff8f0;
+    padding: 40px 20px;
+    font-style: italic;
+  }
+  
+  .ayat .referensi {
+    margin-top: 15px;
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  .bride-groom-section {
+    position: relative;
+    padding: 100px 20px;
+    text-align: center;
+    background: url('../img/hd-9.avif') no-repeat center center/cover;
+  }
+  
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px #000;
+  }
+  
+  .bride-groom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  @media (max-width: 480px) {
+  .bride-groom-section {
+    padding: 60px 20px;
+  }
+
+  .bride, .groom {
+    width: 90%;
+    height: auto;
+  }
+  }
+  
+  .bride, .groom {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .bride.animate-left {
+    transform: translateX(-100px);
+    animation: slideInLeft 1s forwards;
+  }
+  
+  .groom.animate-right {
+    transform: translateX(100px);
+    animation: slideInRight 1s forwards;
+  }
+  
+  @keyframes slideInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .bride h3, .groom h3 {
+    font-size: 1.8rem;
+    color: #6b4e3d;
+    margin-bottom: 10px;
+  }
+  
+  .bride p, .groom p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+.instagram-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(1, 30, 5, 0.39); /* Hitam transparan */
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  
+  /* Animasi */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.instagram-button i {
+  margin-right: 8px;
+}
+
+.instagram-button:hover {
+  background-color: #c72e5f; /* Warna merah saat hover */
+  transform: scale(1.05); /* Sedikit membesar saat hover */
+}
+  
+  .and-symbol {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    padding-top: 10px;
+  }
+
+  .save-date{
+    background: url(../img/hd-8.avif) no-repeat center center/cover;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .save-date h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  .event {
+    margin-bottom: 40px;
+  }
+  
+  .event h3 {
+    font-size: 1.5em;
+    color: #6b4f3b;
+  }
+  
+  .event p {
+    margin: 10px 0;
+  }
+  
+  .btn-maps {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #b5a890;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+  
+  .btn-maps:hover {
+    background-color: #a8957e;
+  }
+
+.save-box {
+  display: inline-block;
+  padding: 30px 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: #6b4f3b;
+  font-family: 'Playfair Display', serif;
+  transition: transform 0.3s ease;
+}
+
+.save-box:hover {
+  transform: scale(1.03);
+}
+
+  .penutup {
+  background: url(../img/hd-11.avif);
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.penutup-box {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0dcd7;
+  animation: fadeInUp 1s ease-out;
+}
+
+.nama-akhir p {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #6b4f3b;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.05em;
+}
+
+.tanggal {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #c29958;
+  margin-bottom: 16px;
+}
+
+.terima-kasih {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  margin-bottom: 12px;
+}
+
+.uraian {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .penutup-box {
+    padding: 30px 20px;
+    border-radius: 16px;
+  }
+
+  .nama-akhir p {
+    font-size: 1.6rem;
+  }
+
+  .uraian {
+    font-size: 0.95rem;
+  }
+}
+
+
+  #countdown {
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  #countdown div {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    min-width: 60px;
+  }
+  
+  #countdown span {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  #countdown small {
+    font-size: 0.9em;
+  }
+  #music-indicator {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    gap: 2px;
+    z-index: 9999;
+    padding: 6px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 8px;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  #music-indicator .bar {
+    width: 4px;
+    height: 100%;
+    background: white;
+    animation: music-bar 0.6s infinite ease-in-out;
+  }
+
+  #music-indicator .bar:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  #music-indicator .bar:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes music-bar {
+    0%, 100% {
+      height: 6px;
+    }
+    50% {
+      height: 20px;
+    }
+  }
+
+  
+    .animate {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+    }
+
+    .animate.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #countdown span {
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .instagram-btn:hover {
+      background: #fff;
+      color: #444;
+    }
+
+    /* #isi-undangan {
+      display: none;
+      min-height: 100vh;
+      background-color: #fefaf6;
+    }
+
+    #isi-undangan.show {
+      display: block;
+      animation: fadeIn 1s ease forwards;
+    } */
+
+    #isi-undangan {
+  display: none;
+  width: 100%;
+  background-color: #fefaf6;
+  overflow-x: hidden; /* cegah geser kanan */
+}
+
+#isi-undangan.show {
+  display: block;
+  animation: fadeIn 1s ease forwards;
+}
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    height: 100%;
+  }
+
+  .hero {
+    background-image: url('../img/fix-1.jpg'); /* Ganti dengan path image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .content h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+  
+  .content p {
+    margin: 10px 0;
+    font-size: 1.1em;
+  }
+  
+  button {
+    background-color: #b5a890ae;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background-color: #a8997d;
+  }
+  
+  @media (max-width: 600px) {
+    .content h1 {
+      font-size: 1.8em;
+    }
+  
+    .content p {
+      font-size: 1em;
+    }
+  
+    button {
+      font-size: 0.9em;
+      padding: 8px 16px;
+    }
+  }
+  /* Animasi fade out untuk hero section */
+.fade-out {
+    animation: fadeOut 1.2s forwards ease-in-out;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.05);
+    }
+  }
+
+  #isi-undangan {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#isi-undangan.show {
+  display: block;
+  opacity: 1;
+}
+
+.slide-up {
+  animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}

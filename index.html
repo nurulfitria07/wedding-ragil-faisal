@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Ragil & Faisal</title>
+
+  <!-- Fonts & Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="css/undangan.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fefaf6;
+      margin: 0;
+      padding: 0;
+      color: #444;
+    } */
+  </style>
+</head>
+
+<body>
+
+  <!-- Halaman Awal -->
+<div class="hero" id="halaman-awal">
+  <div class="overlay"></div>
+  <div class="content animate__animated animate__fadeIn">
+    <h1>Ragil & Faisal</h1>
+      <p>Kepada Bapak/Ibu/Saudara/i</p>
+      <p id="namaUndangan" style="font-weight: bold; font-size: 20px; margin-top:5px;"></p>
+    <button onclick="bukaUndangan()"> 💌 Buka Undangan</button>
+  </div>
+</div>
+
+  <!-- Isi Undangan -->
+  <div id="isi-undangan">
+    <audio id="backsound" src="music/bercinta-lewat-kata (mp3cut.net).mp3" loop></audio>
+
+    <!-- Music indicator (jika ingin aktifkan bisa tambahkan styling + JS) -->
+    <div id="music-indicator" title="Musik sedang diputar">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <!-- Section: Cover -->
+<section class="cover animate">
+  <div class="cover-content">
+    
+    <!-- Logo -->
+    <img src="img/logo.png" 
+         alt="Logo" 
+         class="cover-logo">
+
+    <!-- Teks Utama -->
+    <h2 class="animate__animated animate__fadeInDown">The Wedding Of</h2><br>
+    <h1 class="animate__animated animate__fadeIn">Ragil & Faisal</h1>
+    <h3 class="judul-tanggal animate__animated animate__fadeInUp">Senin, 15 September 2025</h3>
+
+    <!-- Countdown -->
+    <div id="countdown">
+      <div><span id="days">0</span><small>Hari</small></div>
+      <div><span id="hours">0</span><small>Jam</small></div>
+      <div><span id="minutes">0</span><small>Menit</small></div>
+      <div><span id="seconds">0</span><small>Detik</small></div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Section: Ayat -->
+    <section id="ayat" style="background: url('img/hd-5.avif') no-repeat center center; background-size: cover; padding: 60px 20px; text-align: center; color: #333;">
+      <div class="container" style="background-color: rgba(255,255,255,0.8); border-radius: 20px; padding: 40px;" data-aos="fade-up">
+        <h2 style="font-family: 'Scheherazade', serif; font-size: 32px; color: #5a3e36;">
+          وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةًۗ اِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ ۝٢١
+        </h2>
+        <p>
+          “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan-pasangan dari jenismu sendiri, supaya kamu cenderung dan merasa tentram kepadanya, dan dijadikan-nya di antaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kamu yang berpikir.”
+          <br><strong>(QS. Ar-Rum: 21)</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- Section: Bride & Groom -->
+    <section class="bride-groom-section" id="bride-groom" data-aos="zoom-out">
+      <h2 class="section-title">Bride & Groom</h2>
+      <div class="bride-groom">
+        <div class="bride" data-aos="fade-right">
+          <h3>Ragil Purnamasari</h3>
+          <p>Putri dari Bapak Suhartojo &<br> Ibu Farchanah</p>
+          <a href="https://www.instagram.com/ragiilp" target="_blank" class="instagram-button">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+
+        <div class="and-symbol">&</div>
+
+        <div class="bride" data-aos="fade-left">
+          <h3>Faisal Akbar</h3>
+          <p>Putra dari Bapak Ismanu & <br> Ibu Sirtu Fillaili</p>
+          <a href="https://www.instagram.com/faisalakbar91" target="_blank" class="instagram-button">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Save the Date -->
+    <section class="save-date animate" data-aos="fade-up">
+      <div class="save-box">
+        <h2>Save the Date</h2>
+        <div class="event">
+          <h3>Resepsi</h3>
+          <p><strong>Senin, 15 September 2025</strong><br>11.00 - 13.00 WIB </p>
+          <P>Kediaman Mempelai Wanita</P> 
+          <h4>Jl. Simpang Teluk Bayur Gg. V No. 4</h4>
+          <a href="https://www.google.com/maps/place/Gg.+V+No.4,+Pandanwangi,+Kec.+Blimbing,+Kota+Malang,+Jawa+Timur+65126/@-7.9434716,112.6639724,19z/data=!3m1!4b1!4m6!3m5!1s0x2dd629a0d89a5a6f:0x668584f447c87295!8m2!3d-7.9434716!4d112.6646161!16s%2Fg%2F11p61st_lj?entry=ttu&g_ep=EgoyMDI1MDgwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-maps">Lihat di Google Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Penutup -->
+    <section class="penutup animate" data-aos="fade-up">
+      <div class="penutup-box">
+        <div class="nama-akhir">
+          <p>Ragil & Faisal</p>
+        </div>
+        <h3 class="tanggal">15 September 2025</h3>
+        <p class="terima-kasih">Terima Kasih</p>
+        <p class="uraian">
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu kepada kami.
+        </p><br>
+        <p>Yang mengundang : <br>
+            Bapak Suhartojo
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+function bukaUndangan() {
+  const halamanAwal = document.getElementById("halaman-awal");
+  const isiUndangan = document.getElementById("isi-undangan");
+  const backsound = document.getElementById("backsound");
+
+  halamanAwal.classList.add("slide-up");
+
+  setTimeout(() => {
+    halamanAwal.style.display = "none";
+    isiUndangan.classList.add("show");
+
+    backsound.play().catch((e) => {
+      console.log("Gagal memutar audio:", e);
+    });
+    AOS.refresh();
+  }, 1000);
+}
+    // Countdown
+    function updateCountdown() {
+      const acaraDate = new Date("2025-09-15T11:00:00").getTime();
+      const now = new Date().getTime();
+      const distance = acaraDate - now;
+
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "Acara telah dimulai!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Observer animasi manual
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+  <script>
+  // Ambil parameter "to" dari URL
+  function getQueryParam(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  // Ubah jadi Title Case biar rapi
+  function toTitleCase(str) {
+    return str.replace(/\s+/g,' ')
+      .trim()
+      .toLowerCase()
+      .replace(/(^|[\s\-'])\p{L}/gu, c => c.toUpperCase());
+  }
+
+  const rawName = getQueryParam('to');
+  if (rawName) {
+    document.getElementById("namaUndangan").textContent = "To : " + toTitleCase(rawName);
+  }
+</script>
+
+<script>
+  function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
+
+  if (!isMobile()) {
+    // Tampilkan peringatan
+    alert("Undangan ini hanya bisa dibuka melalui HP.");
+
+    // Opsional: blok akses dengan redirect atau halaman kosong
+    document.body.innerHTML = `
+      <div style="text-align:center; padding: 50px; font-family: sans-serif;">
+        <h1>⚠️ Mohon Maaf</h1>
+        <p>Undangan ini hanya dapat dibuka melalui perangkat <strong>HP</strong>.</p>
+      </div>
+    `;
+  }
+</script>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
