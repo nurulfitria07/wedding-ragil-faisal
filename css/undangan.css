@@ -191,11 +191,22 @@
     padding-top: 10px;
   }
 
-  .save-date{
+  /* .save-date{
     background: url(../img/hd-8.avif) no-repeat center center/cover;
     text-align: center;
     padding: 60px 20px;
-  }
+  } */
+   .save-date {
+  background: url(../img/hd-8.avif) no-repeat center center/cover;
+  text-align: center;
+  padding: 60px 20px;
+
+  /* trik biar box ketengah */
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  min-height: 100vh;       /* full tinggi layar */
+}
   .save-date h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2em;
@@ -230,14 +241,25 @@
     background-color: #a8957e;
   }
 
-.save-box {
+/* .save-box {
   display: inline-block;
   padding: 30px 50px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   color: #6b4f3b;
   font-family: 'Playfair Display', serif;
   transition: transform 0.3s ease;
+} */
+ .save-box {
+  display: inline-block;
+  padding: 30px 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: #6b4f3b;
+  font-family: 'Playfair Display', serif;
+  background: rgba(255, 255, 255, 0.553); /* opsional biar teks lebih jelas */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
+
 
 .save-box:hover {
   transform: scale(1.03);
