@@ -180,7 +180,7 @@
 }
 
 .instagram-button:hover {
-  background-color: #c72e5f; /* Warna merah saat hover */
+  background-color: #2e6e38; /* Warna merah saat hover */
   transform: scale(1.05); /* Sedikit membesar saat hover */
 }
   
@@ -266,7 +266,7 @@
 }
 
   .penutup {
-  background: url(../img/hd-11.avif);
+  background: url(../img/fix-2.avif);
   padding: 60px 20px;
   text-align: center;
   display: flex;
